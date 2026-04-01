@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Ela Arts Collage{% endblock %}
+
+{% block content %}
+
+{% if search_query %}
+<section style="padding: 20px; background: #f0f0f0; text-align: center; margin: 20px;">
+    <h2>Search Results for: "{{ search_query }}"</h2>
+    <p>Search functionality is working! You searched for: <strong>{{ search_query }}</strong></p>
+</section>
+{% endif %}
+
+<section class="hero">
+    <div class="hero-inner">
+        <h1 class="hero-title">Stop Motion & Digital Painting Artist</h1>
+        <p class="hero-text">
+            Welcome to Ela Arts, where I write and illustrate children’s books and bring handmade puppets and props to
+            life through stop‑motion animation. My work mixes imagination, craft, and a playful spirit to create tiny
+            worlds full of character and charm.
+        </p>
+        <hr class="hero-line">
+    </div>
+</section>
+
+<div id="collage-container" class="collage"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/collage.js"></script>
+{% endblock %}

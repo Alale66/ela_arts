@@ -1,0 +1,66 @@
+{% if success %}
+    <div class="contact-success">
+        Your message has been sent successfully!
+    </div>
+{% endif %}
+
+{% if error %}
+    <div class="contact-error">
+        Something went wrong. Please try again.
+    </div>
+{% endif %}
+
+{% extends "base.html" %}
+
+{% block title %}Contact — Ela Arts{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+    <div class="contact-container">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-left">
+            <h1 class="contact-title">Get in Touch</h1>
+
+            <p class="contact-intro">
+                Have a question about commissions or anything else?
+                I’d love to hear from you.
+            </p>
+
+            <div class="contact-image-wrapper">
+                <!-- FIRST IMAGE -->
+                <img src="/static/contact-image-1.jpg"
+                     alt="Ela Arts Contact"
+                     class="contact-image-main">
+
+                <!-- SECOND IMAGE OVERLAY BOTTOM-RIGHT -->
+                <img src="/static/contact-image-2.jpg"
+                     alt="Ela Arts Contact 2"
+                     class="contact-image-overlay">
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-right">
+            <p class="contact-text">
+                For inquiries, commissions, or just to say hello,
+                feel free to reach out via email or Instagram.
+            </p>
+
+            <p class="contact-line"><strong>Email:</strong> elahesadeghi.art@gmail.com</p>
+            <p class="contact-line"><strong>Instagram:</strong> the_ela_arts</p>
+            <p class="contact-line contact-location"><strong>Location:</strong> Houston, TX</p>
+
+            <form method="POST" action="/send-message" class="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="phone" placeholder="Phone">
+                <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                <button type="submit" class="contact-button">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

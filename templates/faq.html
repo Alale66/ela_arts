@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ - Ela Arts{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-inner">
+        <h1 class="hero-title">Frequently Asked Questions</h1>
+        <p class="hero-text">
+            Find answers to common questions about my work, products, and services.
+        </p>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="faq-container">
+        <div class="faq-list">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <button class="faq-question">What types of products does Ela Arts offer?
+                    <span class="faq-arrow">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path fill-rule="evenodd"
+                                  d="M18.2546728,8.18171329 L18.9617796,8.88882007 L12.5952867,15.2537133 L12.5978964,15.2558012 L11.8907896,15.962908 L11.8882867,15.9607133 L11.8874628,15.9617796 L11.180356,15.2546728 L11.1812867,15.2527133 L4.81828671,8.88882007 L5.52539349,8.18171329 L11.8882867,14.5457133 L18.2546728,8.18171329 Z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Ela Arts is a creative business specializing in stop-motion, children's books, cards, gifts, and
+                        puppets. I create children's books thoughtfully to promote education, diversity, and values. The
+                        illustrated cards are perfect for any occasion. I also have a collection of cute and unique
+                        gifts that are perfect for any child's birthday or special occasion. The puppets I make are
+                        suitable for stop-motion. All my products are made with the utmost attention to detail and
+                        quality to ensure they are not only fun but also lasting and meaningful.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What types of children's books does Ela Arts offer?
+                    <span class="faq-arrow">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path fill-rule="evenodd"
+                                  d="M18.2546728,8.18171329 L18.9617796,8.88882007 L12.5952867,15.2537133 L12.5978964,15.2558012 L11.8907896,15.962908 L11.8882867,15.9607133 L11.8874628,15.9617796 L11.180356,15.2546728 L11.1812867,15.2527133 L4.81828671,8.88882007 L5.52539349,8.18171329 L11.8882867,14.5457133 L18.2546728,8.18171329 Z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Ela Arts provides children's books that are engaging and educational, and uniquely bilingual in
+                        Farsi and English. This feature makes them ideal for Persian kids living abroad. The
+                        illustrations are designed to be educational, with my Nowruz book specifically aimed at teaching
+                        children about Persian culture.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I return the items I ordered?
+                    <span class="faq-arrow">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path fill-rule="evenodd"
+                                  d="M18.2546728,8.18171329 L18.9617796,8.88882007 L12.5952867,15.2537133 L12.5978964,15.2558012 L11.8907896,15.962908 L11.8882867,15.9607133 L11.8874628,15.9617796 L11.180356,15.2546728 L11.1812867,15.2527133 L4.81828671,8.88882007 L5.52539349,8.18171329 L11.8882867,14.5457133 L18.2546728,8.18171329 Z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sorry, but due to the nature of our products, all sales from Ela Arts are final and cannot be
+                        returned.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.querySelectorAll(".faq-question").forEach((btn) => {
+        btn.addEventListener("click", () => {
+
+            // Close all other FAQ answers
+            document.querySelectorAll(".faq-answer").forEach((ans) => {
+                if (ans !== btn.nextElementSibling) {
+                    ans.style.maxHeight = null;
+                }
+            });
+
+            // Remove active class from all other arrows
+            document.querySelectorAll(".faq-question").forEach((q) => {
+                if (q !== btn) q.classList.remove("active");
+            });
+
+            // Toggle the current FAQ item
+            const answer = btn.nextElementSibling;
+            if (answer.style.maxHeight) {
+                // If open → close it
+                answer.style.maxHeight = null;
+                btn.classList.remove("active");
+            } else {
+                // If closed → open it
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                btn.classList.add("active");
+            }
+        });
+    });
+
+</script>
+{% endblock %}

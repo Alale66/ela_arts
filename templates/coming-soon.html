@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Coming Soon ✨{% endblock %}
+
+{% block content %}
+<div style="
+    text-align:center;
+    padding:120px 20px;
+    font-family:'Montserrat Alternates', sans-serif;
+">
+    <img src="/static/logo.png"
+         alt="Ela Arts"
+         style="width:120px; border-radius:50%; opacity:0.9;">
+
+    <h1 style="font-size:42px; margin-top:25px; font-weight:700; color:#333;">
+        This Page is Coming Soon ✨
+    </h1>
+
+    <p style="font-size:20px; max-width:600px; margin:20px auto; line-height:1.7; color:#555;">
+        Shhh… the puppets are still getting dressed.
+        The paint hasn’t dried.
+        The storybook is still yawning.
+        And I’m still coding the last little details behind the scenes.
+        Come back soon — the magic is waking up.
+    </p>
+
+    <div style="margin-top:40px;">
+        <a href="/"
+           style="
+               display:inline-block;
+               padding:12px 28px;
+               background:#333;
+               color:white;
+               border-radius:30px;
+               text-decoration:none;
+               font-weight:600;
+               transition:0.3s;
+           "
+           onmouseover="this.style.background='#555'"
+           onmouseout="this.style.background='#333'">
+            Back to Home
+        </a>
+    </div>
+</div>
+{% endblock %}
