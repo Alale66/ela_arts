@@ -4,12 +4,11 @@
 
 {% block content %}
 
-<section class="blog-section">A
+<section class="blog-section">
     <div class="blog-container">
-
+        <h1>{{ post.title }}</h1>
         <img class="blog-hero" src="{{ post.image }}" alt="{{ post.title }}">
 
-        <h1>{{ post.title }}</h1>
         <p class="blog-meta">{{ post.author }} • {{ post.date }} • {{ post.read_time }}</p>
 
         <p>{{ post.content }}</p>
