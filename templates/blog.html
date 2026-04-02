@@ -4,15 +4,15 @@
 
 {% block content %}
 
-<section class="blog-section">
+<section class="blog-section" xmlns="http://www.w3.org/1999/html">
     <div class="blog-container">
-        <h1>{{ post.title }}</h1>
+        <div><h1>{{ post.title }}</h1><p class="blog-meta">{{ post.author }} • {{ post.date }} • {{ post.read_time }}</p></div>
+
         <img class="blog-hero" src="{{ post.image }}" alt="{{ post.title }}">
 
-        <p class="blog-meta">{{ post.author }} • {{ post.date }} • {{ post.read_time }}</p>
-
-        <p>{{ post.content }}</p>
-
+<span>
+        {{ post.content | safe }}
+</span>
     </div>
 </section>
 
