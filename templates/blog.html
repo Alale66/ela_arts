@@ -7,25 +7,13 @@
 <section class="blog-section">A
     <div class="blog-container">
 
-        <img class="blog-hero" src="/static/blog1.jpg" alt="Elahe Sadeghi">
+        <img class="blog-hero" src="{{ post.image }}" alt="{{ post.title }}">
 
-        <h1>The Story of Elahe Sadeghi and the Birth of Ela Arts: A Journey of Creativity and Passion.</h1>
-        <p>
-            Welcome to Ela Arts!
-            Hello, I'm Elahe. I'd love to share a bit about myself and the inspiration behind Ela Arts.
+        <h1>{{ post.title }}</h1>
+        <p class="blog-meta">{{ post.author }} • {{ post.date }} • {{ post.read_time }}</p>
 
-            As far back as I can remember, I've always been passionate about painting and art. However, I decided to
-            pursue a career in software. After graduating and working as a software developer, my life changed when my
-            son was born. Having lived in Malaysia, the Netherlands, and now the USA, I felt a growing void without art
-            in my life. Inspired by my son's love for the pictures in his books, I began writing children's books.
-            Including Persian language in my stories made this journey even more fulfilling, especially with my
-            husband's support.
+        <p>{{ post.content }}</p>
 
-            My first book, "Did you know?", has been published, and I'm now working on my second book, "Nowruz". As I
-            worked on these books, I realized my dream of creating a space full of delightful gifts that bring joy—from
-            books and crafts to special occasion gifts. This website is the culmination of that dream. I hope the items
-            here can add a touch of happiness to your life.
-        </p>
     </div>
 </section>
 

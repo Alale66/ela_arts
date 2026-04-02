@@ -808,6 +808,11 @@ html, body {
 .blog-container p {
     font-size: 16px;
     line-height: 1.7;
-    margin-bottom: 16px;
+    margin-bottom: -100px;
 }
+
+/*.blog-container p {*/
+/*    margin-bottom: 5px; !* increase or decrease as you like *!*/
+/*}*/
+
 

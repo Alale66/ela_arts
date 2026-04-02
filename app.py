@@ -69,14 +69,46 @@ def send_message():
         print("Email error:", e)
         return render_template("contact.html", error=True)
 
+blog_posts = [
+    {
+        "slug": "the-story",
+        "title": "The Story of Elahe Sadeghi and the Birth of Ela Arts",
+        "author": "Elahe Sadeghi",
+        "date": "Oct 23, 2024",
+        "read_time": "1 min read",
+        "image": "/static/blog1.jpg",
+        "excerpt": "Welcome to Ela Arts! Hello, I'm Elahe. I'd love to share a bit about myself and the inspiration behind Ela Arts...",
+        "content": """
+            Welcome to Ela Arts!
+            Hello, I'm Elahe. I'd love to share a bit about myself and the inspiration behind Ela Arts.
+
+            As far back as I can remember, I've always been passionate about painting and art. However, I decided to
+            pursue a career in software. After graduating and working as a software developer, my life changed when my
+            son was born. Having lived in Malaysia, the Netherlands, and now the USA, I felt a growing void without art
+            in my life. Inspired by my son's love for the pictures in his books, I began writing children's books.
+            Including Persian language in my stories made this journey even more fulfilling, especially with my
+            husband's support.
+
+            My first book, "Did you know?", has been published, and I'm now working on my second book, "Nowruz". As I
+            worked on these books, I realized my dream of creating a space full of delightful gifts that bring joy—from
+            books and crafts to special occasion gifts. This website is the culmination of that dream. I hope the items
+            here can add a touch of happiness to your life.
+        """
+    }
+]
 
 @app.route("/blog-list")
 def blog_list():
-    return render_template("blog-list.html")
+    return render_template("blog-list.html", posts=blog_posts)
 
-@app.route("/blog/the-story")
-def blog():
-    return render_template("blog.html")
+@app.route("/blog/<slug>")
+def blog(slug):
+    post = next((p for p in blog_posts if p["slug"] == slug), None)
+    return render_template("blog.html", post=post)
+
+@app.route("/blog")
+def blog_redirect():
+    return render_template("blog-list.html", posts=blog_posts)
 
 @app.route("/log-in")
 def log_in():
@@ -97,13 +129,6 @@ def shipping_and_return():
 @app.route("/policy")
 def policy():
     return render_template("store-policy.html")
-
-# @app.route("/search")
-# def search():
-#     query = request.args.get('q', '')
-#     # For now, just redirect to home with the search query
-#     # You can implement actual search logic here later
-#     return render_template("profile.html", search_query=query)
 
 if __name__ == "__main__":
     app.run(debug=True)
