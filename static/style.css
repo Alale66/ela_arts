@@ -73,7 +73,6 @@ html, body {
     align-items: center;
     background: #f5f5f5;
     padding: 8px 14px;
-    border-radius: 25px;
     gap: 10px;
     position: relative;
 }
@@ -205,7 +204,6 @@ html, body {
 .collage-item {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
 }
 
 .collage-item img {
@@ -452,11 +450,11 @@ html, body {
 }
 
 /* About */
-.about-section {
+.about-section, .blog-section, .contact-section{
     padding: 80px 0;
 }
 
-.about-container {
+.about-container{
     display: flex;
     align-items: flex-start;
     gap: 60px;
@@ -467,7 +465,6 @@ html, body {
 
 .about-image img {
     width: 480px;
-    border-radius: 10px;
 }
 
 .about-text h1 {
@@ -483,11 +480,11 @@ html, body {
 }
 
 /* CONTACT */
-.contact-section {
-    padding: 80px 20px;
-}
+/*.contact-section {*/
+/*    padding: 80px 20px;*/
+/*}*/
 
-.contact-container {
+.contact-container , .blog-container{
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -525,16 +522,14 @@ html, body {
 
 .contact-image-main {
     width: 100%;
-    border-radius: 12px;
     display: block;
 }
 
 .contact-image-overlay {
     position: absolute;
-    bottom: -20px; /* کمی بیرون از کادر */
-    right: -20px; /* کمی بیرون از کادر */
+    bottom: -20px;
+    right: -20px;
     width: 180px;
-    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -566,7 +561,6 @@ html, body {
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
-    border-radius: 6px;
     border: 1px solid #ccc;
     font: inherit;
 }
@@ -576,7 +570,6 @@ html, body {
     background: #333;
     color: #fff;
     border: none;
-    border-radius: 30px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -591,7 +584,6 @@ html, body {
     background: #e6ffed;
     color: #0a7a2a;
     padding: 12px 18px;
-    border-radius: 8px;
     margin-bottom: 20px;
     border: 1px solid #b6f2c7;
 }
@@ -600,7 +592,6 @@ html, body {
     background: #ffecec;
     color: #a30000;
     padding: 12px 18px;
-    border-radius: 8px;
     margin-bottom: 20px;
     border: 1px solid #f5b5b5;
 }
@@ -609,7 +600,6 @@ html, body {
 .faq-section {
     padding: 80px 20px;
     background: #fff;
-    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 40px 0;
 }
@@ -667,7 +657,6 @@ html, body {
 .policy-section {
     padding: 80px 20px;
     background: #fff;
-    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 40px 0;
 }
@@ -686,7 +675,6 @@ html, body {
 .policy-block {
     padding: 30px;
     background: #f8f9fa;
-    border-radius: 12px;
     border-left: 4px solid #bea3f9;
 }
 
@@ -735,3 +723,91 @@ html, body {
 .policy-text a:hover {
     text-decoration: underline;
 }
+
+/* BLOG LIST */
+
+.blog-list {
+    max-width: 940px;
+    margin: 40px auto;
+}
+
+.blog-card {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgba(232,230,230,0.75);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.blog-card-image img {
+    width: 454px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-card-content {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-card-content h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.blog-excerpt {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.blog-meta {
+    font-size: 12px;
+    color: #777;
+    display: flex;
+    gap: 6px;
+}
+
+/* BLOG */
+
+.blog-section {
+    padding: 40px 0;
+}
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.blog-hero {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+.blog-container h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.blog-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 24px;
+}
+
+.blog-container p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+

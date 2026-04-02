@@ -70,9 +70,13 @@ def send_message():
         return render_template("contact.html", error=True)
 
 
-@app.route("/blog")
+@app.route("/blog-list")
+def blog_list():
+    return render_template("blog-list.html")
+
+@app.route("/blog/the-story")
 def blog():
-    return render_template("coming-soon.html")
+    return render_template("blog.html")
 
 @app.route("/log-in")
 def log_in():
