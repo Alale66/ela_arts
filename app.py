@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request
+from flask import Flask, request, render_template
 import smtplib
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
@@ -8,7 +8,7 @@ import json
 
 app = Flask(__name__)
 load_dotenv()
-with open("./data/projects.json", "r") as f:
+with open("./data/projects.json", "r", encoding="utf-8") as f:
     projects = json.load(f)
 
 with open("./data/blogs.json", "r", encoding="utf-8") as f:
@@ -18,9 +18,6 @@ with open("./data/blogs.json", "r", encoding="utf-8") as f:
 @app.route("/")
 def home():
     return render_template("profile.html")
-
-
-from flask import render_template
 
 
 @app.route("/project/<slug>")
@@ -120,7 +117,6 @@ def blog(slug):
         return "Blog post not found", 404
 
     return render_template("blog.html", post=post)
-
 
 
 @app.route("/blog")
