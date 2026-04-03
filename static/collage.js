@@ -4,7 +4,9 @@ const images = [
     { src: "/static/img3.jpg", title: "Little Arad" },
     { src: "/static/img4.jpg", title: "Amo Nowruz" },
     { src: "/static/img5.jpg", title: "Baba Ali" },
-    { src: "/static/img6.jpg", title: "Maman Ak" }
+    { src: "/static/img6.jpg", title: "Maman Ak" },
+    { src: "/static/img7.jpg", title: "Agha Siroos" },
+    { src: "/static/img8.jpg", title: "Nahid Khanoom" }
 ];
 
 const TARGET_ROW_HEIGHT = 280;
