@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }} – Ela Arts{% endblock %}
+
+{% block content %}
+<section class="project-section">
+    <div class="project-container">
+
+        <!-- ⭐ Navigation Line (Previous | Title | Next) -->
+        <div class="project-header-line">
+
+            <!-- Left side -->
+            {% if prev_slug %}
+            <a href="/project/{{ prev_slug }}" class="nav-btn">Previous</a>
+            {% else %}
+            <span class="nav-placeholder"></span>
+            {% endif %}
+
+            <!-- Center title -->
+            <h2 class="project-line-title">{{ project.title }}</h2>
+            <!-- Subtitle -->
+            <h3 class="project-subtitle">{{ project.subtitle }}</h3>
+            <!-- Right side -->
+            {% if next_slug %}
+            <a href="/project/{{ next_slug }}" class="nav-btn">Next</a>
+            {% else %}
+            <span class="nav-placeholder"></span>
+            {% endif %}
+
+        </div>
+
+
+        <!-- Gallery -->
+        <div class="project-gallery">
+            {% for img in project.images %}
+            <img src="{{ img }}" alt="{{ project.title }}">
+            {% endfor %}
+        </div>
+
+        <!-- Text paragraphs -->
+        {% for paragraph in project.text %}
+        <p class="project-text">{{ paragraph }}</p>
+        {% endfor %}
+
+    </div>
+</section>
+{% endblock %}

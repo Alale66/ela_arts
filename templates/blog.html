@@ -4,15 +4,23 @@
 
 {% block content %}
 
-<section class="blog-section" xmlns="http://www.w3.org/1999/html">
+<section class="blog-section">
     <div class="blog-container">
-        <div><h1>{{ post.title }}</h1><p class="blog-meta">{{ post.author }} • {{ post.date }} • {{ post.read_time }}</p></div>
+
+        <div>
+            <h1>{{ post.title }}</h1>
+            <p class="blog-meta">{{ post.author }} • {{ post.date }} • {{ post.read_time }}</p>
+        </div>
 
         <img class="blog-hero" src="{{ post.image }}" alt="{{ post.title }}">
 
-<span>
-        {{ post.content | safe }}
-</span>
+        <!-- ⭐ Replace your old content block with this -->
+        <div class="blog-content">
+            {% for paragraph in post.content %}
+                <p>{{ paragraph }}</p>
+            {% endfor %}
+        </div>
+
     </div>
 </section>
 
