@@ -1,10 +1,22 @@
-html, body {
-    height: 100%;
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
     margin: 0;
+    padding: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #fafafa;
-    overflow-y: scroll;
-    scrollbar-gutter: stable;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: clamp(24px, 4vw, 48px);
+}
+
+p {
+    font-size: clamp(14px, 2.5vw, 20px);
 }
 
 .page-wrapper {
@@ -16,7 +28,6 @@ html, body {
 .content {
     flex: 1;
 }
-
 
 /* HEADER */
 .header {
@@ -40,6 +51,12 @@ html, body {
     display: flex;
     align-items: center;
     gap: 22px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 /* LOGO */
@@ -93,7 +110,8 @@ html, body {
 }
 
 .search-icon {
-    width: 20px;
+    width: 100%;
+    max-width: 20px;
     height: 20px;
     color: #555; /* matches the screenshot */
 }
@@ -125,9 +143,9 @@ html, body {
 }
 
 /* ICON */
-
 .icon {
-    width: 22px;
+    width: 100%;
+    max-width: 22px;
     height: 22px;
     color: #333;
     cursor: pointer;
@@ -172,6 +190,7 @@ html, body {
 }
 
 .hero-inner {
+    width: 100%;
     max-width: 900px;
     margin: auto;
 }
@@ -236,7 +255,6 @@ html, body {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: #fff;
     padding: 60px 20px 30px;
-    margin-top: 80px;
 }
 
 .footer-container {
@@ -463,8 +481,15 @@ html, body {
     padding: 0 20px;
 }
 
+.about-image {
+    flex: 0 0 480px; /* lock the image column width */
+}
+
 .about-image img {
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: block;
 }
 
 .about-text h1 {
@@ -480,10 +505,6 @@ html, body {
 }
 
 /* CONTACT */
-/*.contact-section {*/
-/*    padding: 80px 20px;*/
-/*}*/
-
 .contact-container {
     max-width: 1100px;
     margin: auto;
@@ -513,7 +534,6 @@ html, body {
 }
 
 /* IMAGES OVERLAY */
-
 .contact-image-wrapper {
     position: relative;
     width: 100%;
@@ -529,12 +549,12 @@ html, body {
     position: absolute;
     bottom: -20px;
     right: -20px;
-    width: 180px;
+    width: 100%;
+    max-width: 180px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* RIGHT SIDE TEXT */
-
 .contact-text {
     font-size: 18px;
     line-height: 1.7;
@@ -551,7 +571,6 @@ html, body {
 }
 
 /* FORM */
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -601,7 +620,6 @@ html, body {
     padding: 80px 20px;
     background: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 40px 0;
 }
 
 .faq-title {
@@ -658,7 +676,6 @@ html, body {
     padding: 80px 20px;
     background: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 40px 0;
 }
 
 .policy-container {
@@ -725,7 +742,6 @@ html, body {
 }
 
 /* BLOG LIST */
-
 .blog-list {
     max-width: 940px;
     margin: 40px auto;
@@ -746,7 +762,8 @@ html, body {
 }
 
 .blog-card-image img {
-    width: 454px;
+    width: auto;
+    max-width: 454px;
     height: 100%;
     object-fit: cover;
 }
@@ -773,7 +790,6 @@ html, body {
     font-size: 12px;
     color: #777;
     display: flex;
-    /*gap: 6px;*/
 }
 
 /* BLOG */
@@ -786,7 +802,6 @@ html, body {
     max-width: 1100px;
     margin: auto;
     display: flex;
-    /*gap: 60px;*/
     align-items: flex-start;
     flex-wrap: wrap;
 }
@@ -795,7 +810,6 @@ html, body {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
-    /*margin-bottom: 24px;*/
 }
 
 .blog-container h1 {
@@ -815,7 +829,6 @@ html, body {
 }
 
 /* PROJECT */
-
 .project-section {
     padding: 60px 0;
 }
@@ -828,13 +841,11 @@ html, body {
 
 .project-container h1 {
     font-size: 36px;
-    /*margin-bottom: 6px;*/
 }
 
 .project-subtitle {
     font-size: 15px;
     color: #777;
-    /*margin-bottom: 40px;*/
 }
 
 .project-text {
@@ -846,7 +857,6 @@ html, body {
 
 .project-header-line {
     border-bottom: 3px solid #ddd;
-    /*padding-bottom: 12px;*/
 }
 
 .project-line-title {
@@ -876,13 +886,15 @@ html, body {
 
 /* ⭐ Keeps layout balanced when no prev/next exists */
 .nav-placeholder {
-    width: 80px;
+    width: 100%;
+    max-width: 80px;
     height: 32px;
     display: inline-block;
 }
 
 .nav-placeholder {
-    width: 80px;
+    width: 100%;
+    max-width: 80px;
     height: 32px;
     display: inline-block;
 }
@@ -928,9 +940,6 @@ html, body {
 }
 
 .project-header-line {
-    /*border-bottom: 3px solid #ddd;*/
-    /*padding-bottom: 12px;*/
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -940,4 +949,127 @@ html, body {
     flex: 1;
     text-align: center;
 }
+
+/* MOBILE MENU OVERLAY */
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    padding: 40px 30px;
+}
+
+/* Show menu */
+.mobile-menu-overlay.active {
+    display: flex;
+}
+
+/* Close button */
+.mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 36px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* Menu links */
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.mobile-menu-nav a {
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    z-index: 99999;
+}
+
+/* MOBILE FIRST APPROACH */
+@media (max-width: 900px) {
+
+    /* Hide desktop nav */
+    nav.desktop-nav {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+
+
+    /* Show hamburger */
+    .mobile-menu-btn {
+        display: block !important;
+    }
+
+    /* Hide login + cart icons */
+    .header-icons {
+        display: none !important;
+    }
+
+    /* Fix header layout */
+    .header-container {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+
+    /* Search bar expands */
+    .search-bar {
+        flex: 1 1 auto;
+        max-width: 50%;
+        min-width: 120px;
+    }
+
+
+    /* About page */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    /* Blog cards */
+    .blog-card {
+        flex-direction: column;
+    }
+
+    .blog-card-image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /*body {*/
+    /*    background: yellow !important;*/
+    /*}*/
+
+}
+
+/* Remove gray tap highlight on mobile */
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
 
