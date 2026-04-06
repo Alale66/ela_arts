@@ -11,7 +11,7 @@
 
             <!-- Left -->
             {% if prev_slug %}
-            <a href="/project/{{ prev_slug }}" class="nav-btn">
+            <a href="/{{ prev_slug }}" class="nav-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                     <path d="M15 6L9 12L15 18"
                           stroke="currentColor"
@@ -33,7 +33,7 @@
 
             <!-- Right -->
             {% if next_slug %}
-            <a href="/project/{{ next_slug }}" class="nav-btn">
+            <a href="/{{ next_slug }}" class="nav-btn">
                 Next
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                     <path d="M9 6L15 12L9 18"

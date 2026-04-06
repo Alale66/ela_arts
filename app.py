@@ -20,7 +20,7 @@ def home():
     return render_template("profile.html")
 
 
-@app.route("/project/<slug>")
+@app.route("/<slug>")
 def project_page(slug):
     # ❗ Check if slug exists
     if slug not in projects:
