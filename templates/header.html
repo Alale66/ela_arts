@@ -1,14 +1,17 @@
 <header class="header">
     <div class="header-container">
+
+        <!-- Logo -->
         <a href="/" class="nav-item {% if request.path == '/' %}active{% endif %}">
             <div class="logo">
                 <img src="/static/logo.png" alt="Ela Arts Logo">
                 <div class="logo-text">
-                    <div CLASS="montserrat-alternates-black">Ela Arts
-                    </div>
+                    <div class="montserrat-alternates-black">Ela Arts</div>
                 </div>
             </div>
         </a>
+
+        <!-- Search -->
         <div class="search-bar">
             <input type="search" name="q" placeholder="Search...">
             <button type="submit" class="search-btn">
@@ -20,42 +23,44 @@
             </button>
         </div>
 
-        <nav class="nav">
+        <!-- Desktop nav -->
+        <nav class="nav desktop-nav">
             <a href="/" class="nav-item {% if request.path == '/' %}active{% endif %}">PORTFOLIO</a>
-
             <a href="/shop" class="nav-item {% if request.path == '/shop' %}active{% endif %}">SHOP</a>
-
             <a href="/about" class="nav-item {% if request.path == '/about' %}active{% endif %}">ABOUT</a>
-
             <a href="/contact" class="nav-item {% if request.path == '/contact' %}active{% endif %}">CONTACT</a>
-
             <a href="/blog-list" class="nav-item {% if request.path == '/blog-list' %}active{% endif %}">BLOG</a>
-
         </nav>
 
-        <div class="header-icons">
-            <a href="/log-in" class="header-link login-link {% if request.path == '/log-in' %}active{% endif %}">
-                <div class="icon-with-text">
+        <!-- Right side: icons + mobile button -->
+        <div class="header-right">
+            <div class="header-icons">
+                <a href="/log-in" class="header-link login-link {% if request.path == '/log-in' %}active{% endif %}">
+                    <div class="icon-with-text">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" fill="none"
+                                  stroke-linecap="round"/>
+                        </svg>
+                        <span class="login-text">Log In</span>
+                    </div>
+                </a>
+
+                <a href="/cart" class="header-link cart-link {% if request.path == '/cart' %}active{% endif %}">
                     <svg class="icon" viewBox="0 0 24 24">
-                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" fill="none"
-                              stroke-linecap="round"/>
+                        <circle cx="9" cy="20" r="1.8" fill="currentColor"/>
+                        <circle cx="17" cy="20" r="1.8" fill="currentColor"/>
+                        <path d="M3 4h2l3 12h10l3-8H6" stroke="currentColor" stroke-width="2" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <span class="login-text">Log In</span>
-                </div>
-            </a>
+                </a>
+            </div>
 
-            <a href="/cart" class="header-link cart-link {% if request.path == '/cart' %}active{% endif %}">
-                <svg class="icon" viewBox="0 0 24 24">
-                    <circle cx="9" cy="20" r="1.8" fill="currentColor"/>
-                    <circle cx="17" cy="20" r="1.8" fill="currentColor"/>
-                    <path d="M3 4h2l3 12h10l3-8H6" stroke="currentColor" stroke-width="2" fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                </svg>
-            </a>
+            <!-- Mobile menu button -->
+            <button onclick="toggleMenu()" class="mobile-menu-btn">
+                ☰
+            </button>
         </div>
-
 
     </div>
 </header>

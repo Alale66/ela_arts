@@ -29,7 +29,12 @@ p {
     flex: 1;
 }
 
-/* HEADER */
+/* Remove gray tap highlight on mobile */
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* region HEADER */
 .header {
     background: white;
     border-bottom: 1px solid #e5e5e5;
@@ -113,7 +118,7 @@ p {
     width: 100%;
     max-width: 20px;
     height: 20px;
-    color: #555; /* matches the screenshot */
+    color: #555;
 }
 
 /* NAV */
@@ -182,7 +187,9 @@ p {
     color: gray !important;
 }
 
-/* HERO */
+/* endregion */
+
+/* region HERO */
 .hero {
     background: #f7f3ff;
     padding: 100px 20px;
@@ -207,7 +214,9 @@ p {
     line-height: 1.8;
 }
 
-/* COLLAGE */
+/* endregion */
+
+/* region COLLAGE */
 .collage {
     max-width: 1400px;
     margin: 60px auto;
@@ -250,7 +259,9 @@ p {
     background: rgba(0, 0, 0, 0.4);
 }
 
-/* FOOTER */
+/* endregion */
+
+/* region FOOTER */
 .footer {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: #fff;
@@ -358,7 +369,9 @@ p {
     color: #999;
 }
 
-/* Font */
+/* endregion */
+
+/* region Font */
 .montserrat-alternates-thin {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 100;
@@ -467,29 +480,37 @@ p {
     font-style: italic;
 }
 
-/* About */
+/* endregion */
+
+/* region About */
 .about-section, .blog-section, .contact-section {
     padding: 80px 0;
 }
 
-.about-container {
+.about-container, .contact-container, .blog-container {
     display: flex;
     align-items: flex-start;
     gap: 60px;
     max-width: 1100px;
     margin: auto;
-    padding: 0 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.about-left, .about-right,
+.contact-left, .contact-right {
+    flex: 1;
+    min-width: 320px;
 }
 
 .about-image {
-    flex: 0 0 480px; /* lock the image column width */
+    position: relative;
+    width: 100%;
+    display: block;
 }
 
 .about-image img {
     width: 100%;
-    max-width: 480px;
-    height: auto;
-    display: block;
 }
 
 .about-text h1 {
@@ -501,24 +522,11 @@ p {
 .about-text p {
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 18px;
 }
 
-/* CONTACT */
-.contact-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    gap: 60px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
+/* endregion */
 
-.contact-left,
-.contact-right {
-    flex: 1;
-    min-width: 320px;
-}
+/* region CONTACT */
 
 .contact-title {
     font-size: 36px;
@@ -570,7 +578,7 @@ p {
     margin-bottom: 30px;
 }
 
-/* FORM */
+/* CONTACT FORM */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -615,7 +623,90 @@ p {
     border: 1px solid #f5b5b5;
 }
 
-/* FAQ SECTION */
+/* endregion */
+
+/* region BLOG LIST */
+.blog-list {
+    max-width: 940px;
+    margin: 40px auto;
+}
+
+.blog-card {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgba(232, 230, 230, 0.75);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-image img {
+    width: auto;
+    max-width: 454px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-card-content {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-card-content h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.blog-excerpt {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.blog-meta {
+    font-size: 12px;
+    color: #777;
+    display: flex;
+}
+
+/* BLOG */
+
+.blog-section {
+    padding: 40px 0;
+}
+
+.blog-hero {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.blog-container h1 {
+    font-size: 32px;
+}
+
+.blog-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 50px;
+}
+
+.blog-container p {
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 1rem 0;
+}
+
+/* endregion */
+
+/* region FAQ SECTION */
 .faq-section {
     padding: 80px 20px;
     background: #fff;
@@ -667,11 +758,12 @@ p {
 .faq-answer p {
     margin: 10px 0 0 0;
     line-height: 1.6;
-    color: #555; /* gray text */
+    color: #555;
 }
 
+/* endregion */
 
-/* POLICY SECTION */
+/* region POLICY SECTION */
 .policy-section {
     padding: 80px 20px;
     background: #fff;
@@ -741,96 +833,11 @@ p {
     text-decoration: underline;
 }
 
-/* BLOG LIST */
-.blog-list {
-    max-width: 940px;
-    margin: 40px auto;
-}
+/* endregion */
 
-.blog-card {
-    display: flex;
-    width: 100%;
-    border: 1px solid rgba(232, 230, 230, 0.75);
-    text-decoration: none;
-    color: inherit;
-    transition: 0.2s ease;
-}
-
-.blog-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.blog-card-image img {
-    width: auto;
-    max-width: 454px;
-    height: 100%;
-    object-fit: cover;
-}
-
-.blog-card-content {
-    padding: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.blog-card-content h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
-}
-
-.blog-excerpt {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.blog-meta {
-    font-size: 12px;
-    color: #777;
-    display: flex;
-}
-
-/* BLOG */
-
-.blog-section {
-    padding: 40px 0;
-}
-
-.blog-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.blog-hero {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-}
-
-.blog-container h1 {
-    font-size: 32px;
-}
-
-.blog-meta {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 50px;
-}
-
-.blog-container p {
-    font-size: 16px;
-    line-height: 1.65;
-    margin: 1rem 0;
-}
-
-/* PROJECT */
+/* region PROJECT */
 .project-section {
-    padding: 60px 0;
+    padding: 20px;
 }
 
 .project-container {
@@ -950,7 +957,9 @@ p {
     text-align: center;
 }
 
-/* MOBILE MENU OVERLAY */
+/* endregion */
+
+/* region MOBILE MENU OVERLAY */
 .mobile-menu-overlay {
     position: fixed;
     inset: 0;
@@ -973,6 +982,7 @@ p {
     font-size: 36px;
     align-self: flex-end;
     cursor: pointer;
+    color: black;
 }
 
 /* Menu links */
@@ -999,10 +1009,17 @@ p {
     z-index: 99999;
 }
 
-/* MOBILE FIRST APPROACH */
+/* MOBILE HEADER FIX — SAFARI SAFE */
 @media (max-width: 900px) {
 
-    /* Hide desktop nav */
+    /* Force header to wrap so Safari recalculates layout */
+    .header-container {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        padding: 12px 16px;
+    }
+
+    /* Hide desktop nav fully */
     nav.desktop-nav {
         display: none !important;
         visibility: hidden !important;
@@ -1011,64 +1028,70 @@ p {
         overflow: hidden !important;
     }
 
-
-    /* Show hamburger */
-    .mobile-menu-btn {
-        display: block !important;
-    }
-
     /* Hide login + cart icons */
     .header-icons {
         display: none !important;
     }
 
-    /* Fix header layout */
-    .header-container {
-        flex-wrap: wrap !important;
-        width: 100% !important;
+    /* Show hamburger */
+    .mobile-menu-btn {
+        display: block !important;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 9999;
+        color: black;
     }
 
-    /* Search bar expands */
+    /* Layout: logo left, search center, hamburger right */
+    .logo {
+        order: 1;
+        flex: 0 0 auto;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
     .search-bar {
+        order: 2;
         flex: 1 1 auto;
+        min-width: 140px;
         max-width: 50%;
-        min-width: 120px;
+        margin: 0 10px;
     }
 
-
-    /* About page */
-    .about-container {
-        flex-direction: column;
-        text-align: center;
+    .header-right {
+        order: 3;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        padding-right: 30px;
     }
 
-    .about-image img {
-        width: 100%;
-        max-width: 420px;
-        margin: 0 auto;
+    /* Make sure nothing overflows */
+    .header-container > * {
+        flex-shrink: 1;
     }
 
-    /* Blog cards */
     .blog-card {
-        flex-direction: column;
+        flex-direction: column; /* stack image above content */
     }
 
     .blog-card-image img {
         width: 100%;
-        height: auto;
-        max-width: 100%;
+        max-width: none; /* remove desktop limit */
+        height: auto; /* keep proportions */
     }
 
-    /*body {*/
-    /*    background: yellow !important;*/
-    /*}*/
+    .blog-card-content {
+        padding: 20px; /* smaller padding for mobile */
+    }
 
 }
 
-/* Remove gray tap highlight on mobile */
-a, button {
-    -webkit-tap-highlight-color: transparent;
-}
+/* endregion */
 
 
 

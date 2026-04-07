@@ -20,7 +20,20 @@
 <body>
 <div class="page-wrapper">
 
-    {% include 'header.html' %}
+    {% include 'header.html' %}<!-- v12 -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="toggleMenu()">×</button>
+
+        <nav class="mobile-menu-nav">
+            <a href="/">PORTFOLIO</a>
+            <a href="/shop">SHOP</a>
+            <a href="/about">ABOUT</a>
+            <a href="/contact">CONTACT</a>
+            <a href="/blog">BLOG</a>
+            <a href="/log-in">LOG IN</a>
+            <a href="/cart">CART</a>
+        </nav>
+    </div>
 
     <main class="content">
         {% block content %}{% endblock %}
@@ -34,17 +47,21 @@
 {% endblock %}
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll('.nav-item');
+    document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll('.nav-item');
 
-    items.forEach(item => {
-        item.addEventListener('click', function () {
-            items.forEach(i => i.classList.remove('active'));
-            this.classList.add('active');
+        items.forEach(item => {
+            item.addEventListener('click', function () {
+                items.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
         });
     });
-});
 </script>
-
+<script>
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active");
+    }
+</script>
 </body>
 </html>
