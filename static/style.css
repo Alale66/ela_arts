@@ -965,16 +965,22 @@ a, button {
     inset: 0;
     background: white;
     z-index: 9999;
-    display: none;
+
+    display: flex;
     flex-direction: column;
     padding: 40px 30px;
+
+    /* Animation defaults */
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 /* Show menu */
 .mobile-menu-overlay.active {
-    display: flex;
+    transform: translateX(0);
+    opacity: 1;
 }
-
 /* Close button */
 .mobile-menu-close {
     background: none;
