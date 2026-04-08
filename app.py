@@ -30,7 +30,7 @@ def home():
 def project_page(slug):
     # ❗ Check if slug exists
     if slug not in projects:
-        return "Project not found", 404
+        return render_template("coming-soon.html")
 
     # ⭐ Create an ordered list of slugs
     project_slugs = list(projects.keys())
