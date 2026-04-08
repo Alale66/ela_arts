@@ -3,5 +3,45 @@
 {% block title %}Shop – Ela Arts{% endblock %}
 
 {% block content %}
-<h1>Shop</h1>
+
+<section class="shop-section">
+    <div class="shop-container">
+        <section class="shop-hero">
+            <h1>Bringing One-of-a-Kind Creations Straight to Your Door</h1>
+            <div class="shop-hero-container">
+                <p>
+                    At Ela Arts, we believe that everything should be unique, and that is why we specialize in selling
+                    handmade art,
+                    children's books, and puppets. Our mission is to provide a platform for showcasing and selling
+                    one-of-a-kind
+                    creations that you won't find anywhere else. Whether you're looking for a new addition to your art
+                    collection,
+                    a special gift for a child, or just something to bring a smile to your face, we have something for
+                    everyone.
+                    Shop now and discover the magic of Ela Arts!
+                </p>
+            </div>
+        </section>
+
+        <div class="shop-grid">
+
+            {% for item in categories %}
+            <a href="/shop/{{ item.slug }}" class="shop-card">
+
+                <div class="shop-card-content top">
+                    <h2>{{ item.title }}</h2>
+                    <p>{{ item.description }}</p>
+                </div>
+
+                <img class="shop-card-image"
+                     src="{{ item.image }}"
+                     alt="{{ item.title }}">
+            </a>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</section>
+
 {% endblock %}

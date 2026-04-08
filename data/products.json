@@ -1,0 +1,83 @@
+{
+  "books": [
+    {
+      "title": "Nowruz (English & Farsi)",
+      "image": "/static/shop/products/nowruz.jpg",
+      "price": 24.99,
+      "stock": 0,
+      "description": "Nowruz (English & Farsi) by Elahe Sadeghi — نوروز is a beautifully crafted bilingual children’s book that introduces young readers to the magic of the Iranian New Year. Written in both English and Farsi, it celebrates the richness of Persian culture through simple language, vibrant illustrations, and heartfelt storytelling.\n\nFrom the symbolic Haft‑Seen table to the joyful traditions that welcome the arrival of spring, this book invites children and adults alike to explore the beauty of Nowruz. Each page offers a warm, engaging look into one of the world’s oldest celebrations, making it both educational and deeply meaningful.\n\nWhether you’re sharing your heritage with your little ones or discovering Iranian culture for the first time, Nowruz is a wonderful addition to any child’s library — a story filled with color, tradition, and the spirit of renewal."
+    },
+    {
+      "title": "Did You Know? (Animals)",
+      "image": "/static/shop/products/did-you-know.jpg",
+      "price": 14.99,
+      "stock": 5,
+      "description": "Did You Know? (Animals) by Elahe Sadeghi — آیا می‌دانید؟ (حیوانات) is a delightful bilingual children’s book that sparks curiosity and wonder about the animal kingdom. Written in both English and Farsi, this book introduces young readers to fascinating facts about animals from around the world, making learning fun and engaging.\n\nWith vibrant illustrations and simple language, Did You Know? (Animals) captures the imagination of children while teaching them about the diversity of life on our planet. From the tallest giraffes to the tiniest insects, this book encourages kids to explore the natural world and appreciate its beauty.\n\nPerfect for bilingual families or anyone looking to introduce their children to new languages and cultures, Did You Know? (Animals) is a wonderful addition to any child’s library — a book that inspires curiosity and a love for learning."
+    },
+    {
+      "title": "Little Arad - Welcome to the World",
+      "image": "/static/shop/products/arad.jpg",
+      "price": 24.99,
+      "stock": 0,
+      "description": "Little Arad - Welcome to the World by Elahe Sadeghi — آراد کوچولو - خوش آمدی به دنیا is a heartwarming bilingual children’s book that celebrates the joy of welcoming a new baby into the world. Written in both English and Farsi, this book tells the story of Little Arad, a newborn who embarks on a delightful journey of discovery and love.\n\nThrough vibrant illustrations and simple, heartfelt language, Little Arad - Welcome to the World captures the magic of early childhood and the special bond between parents and their little ones. It’s a perfect gift for new parents or anyone looking to share the beauty of life’s beginnings with their children.\n\nWhether you’re introducing your child to their heritage or simply celebrating the miracle of life, Little Arad - Welcome to the World is a wonderful addition to any child’s library — a story filled with love, wonder, and the promise of new adventures."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Ela Arts Happy Mother’s Day Card with Envelope",
+      "image": "/static/shop/products/mother-day-card.jpg",
+      "price": 5.99,
+      "stock": 3,
+      "info": ["Folded Happy Mother’s Day greeting card","Size 5\" * 7\"","Blank interior"," White envelope"]
+    },
+     {
+      "title": "Ela Arts Happy Father’s Day Card with Envelope",
+      "image": "/static/shop/products/father-day-card.jpg",
+      "price": 5.99,
+      "stock": 3,
+      "info": ["Folded Happy Father’s Day greeting card","Size 5\" * 7\"","Blank interior"," White envelope"]
+    },
+     {
+      "title": "Ela Arts Amoo Nowruz Happy New Year Card with Envelope",
+      "image": "/static/shop/products/amoo-nowruz-card.jpg",
+      "price": 5.99,
+      "stock": 0,
+      "info": ["Folded Nowruz greeting card","Size 5\" * 7\"","Blank interior"," White envelope"]
+    },
+     {
+      "title": "Ela Arts Happy New Year Card with Envelope",
+      "image": "/static/shop/products/girl-nowruz-card.jpg",
+      "price": 5.99,
+      "stock": 0,
+      "info": ["Folded Nowruz greeting card","Size 5\" * 7\"","Blank interior"," White envelope"]
+    },
+     {
+      "title": "Ela Arts Valentine's Day Card Bunnies in Love",
+      "image": "/static/shop/products/bunny-card.jpg",
+      "price": 5.99,
+      "stock": 0,
+      "info": ["Valentine's Day card","Size 5\" * 7\"","Blank interior"," White envelope"]
+    },
+     {
+      "title": "Ela Arts Valentine's Day Card Dog with Balloon",
+      "image": "/static/shop/products/dog-card.jpg",
+      "price": 5.99,
+      "stock": 0,
+      "info": ["Valentine's Day card","Size 5\" * 7\"","Blank interior"," White envelope"]
+    }
+  ],
+  "nowruz": [
+    {
+      "title": "Nowruz Gift Set (4 pcs)",
+      "image": "/static/shop/products/nowruz-set.jpg",
+      "price": 39.99,
+      "stock": 0
+    },
+    {
+      "title": "Nowruz Book + Happy New Year Card (2 pcs)",
+      "image": "/static/shop/products/nowruzcard-book.jpg",
+      "price": 26.99,
+      "stock": 0
+    }
+  ]
+}

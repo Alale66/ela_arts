@@ -1,0 +1,20 @@
+[
+    {
+        "slug": "books",
+        "title": "Children’s Books",
+        "description": "Available in both Farsi and English, designed to introduce kids to the beautiful Persian language and culture.",
+        "image": "/static/shop/categories/books.jpg"
+    },
+    {
+        "slug": "cards",
+        "title": "Greeting Cards",
+        "description": "Beautifully crafted cards to celebrate life’s special moments.",
+        "image": "/static/shop/categories/cards.jpg"
+    },
+    {
+        "slug": "nowruz",
+        "title": "Nowruz",
+        "description": "One‑of‑a‑kind Nowruz gifts created to bring color, culture, and love to your celebrations.",
+        "image": "/static/shop/categories/nowruz.jpg"
+    }
+]

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category.title }} – Ela Arts{% endblock %}
+
+{% block content %}
+
+<section class="category-section">
+    <div class="category-container">
+
+        <!-- ⭐ Header (matches shop hero spacing) -->
+        <section class="category-header">
+            <h1>{{ category.title }}</h1>
+            <p>{{ category.description }}</p>
+        </section>
+
+        <!-- ⭐ Product Grid -->
+        <section class="product-grid-section">
+            <div class="product-grid">
+
+                {% for product in products %}
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="{{ product.image }}" alt="{{ product.title }}">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>{{ product.title }}</h3>
+
+                        {% if product.stock == 0 %}
+                        <p class="price out">Out of stock</p>
+                        {% else %}
+                        <p class="price">${{ product.price }}</p>
+
+                        {% if product.stock < 6 %}
+                        <p class="low-stock">Only {{ product.stock }} left</p>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+
+                </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -14,13 +14,19 @@ with open("./data/projects.json", "r", encoding="utf-8") as f:
 with open("./data/blogs.json", "r", encoding="utf-8") as f:
     blogs = json.load(f)
 
+with open("./data/shop-categories.json", "r", encoding="utf-8") as f:
+    shop_categories = json.load(f)
+
+with open("data/products.json", "r", encoding="utf-8") as f:
+    products = json.load(f)
+
 
 @app.route("/")
 def home():
     return render_template("profile.html")
 
 
-@app.route("/<slug>")
+@app.route("/portfolio/<slug>")
 def project_page(slug):
     # ❗ Check if slug exists
     if slug not in projects:
@@ -50,7 +56,20 @@ def project_page(slug):
 
 @app.route("/shop")
 def shop():
-    return render_template("coming-soon.html")
+    return render_template("shop.html", categories=shop_categories)
+
+
+@app.route("/shop/<slug>")
+def shop_category(slug):
+    category = next((c for c in shop_categories if c["slug"] == slug), None)
+    if not category:
+        return "Category not found", 404
+
+    category_products = products.get(slug, [])
+
+    return render_template("shop-category.html",
+                           category=category,
+                           products=category_products)
 
 
 @app.route("/about")
