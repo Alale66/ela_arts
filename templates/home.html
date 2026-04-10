@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Home – Ela Arts{% endblock %}
+
+{% block content %}
+
+<!-- TEXT SECTION BELOW IMAGES -->
+<section class="hero">
+    <div class="hero-inner">
+        <h1 class="hero-title">
+            Software Developer · Stop‑Motion & Digital Painting Artist
+        </h1>
+
+        <p class="hero-text">
+            I create stories through software, illustrations, and handmade worlds.
+        </p>
+        <p class="hero-text">
+            I build worlds in two ways: with code, and with my hands. From C# and Python to puppets, props, and digital
+            paintings, my work lives where logic meets imagination.
+        </p>
+        <hr class="hero-line">
+    </div>
+</section>
+
+<div class="home-container">
+
+    <!-- LEFT IMAGE — ART SIDE -->
+    <div class="home-left">
+        <div class="home-image">
+            <img src="/static/home_art.jpg" alt="Ela Arts Books and Puppets">
+        </div>
+    </div>
+
+    <!-- RIGHT IMAGE — TECH SIDE -->
+    <div class="home-right">
+        <div class="home-image">
+            <img src="/static/home-code.jpg" alt="Ela Arts Coding Workspace">
+        </div>
+    </div>
+
+</div>
+
+<a href="/portfolio" class="home-button">Explore My Work</a>
+
+{% endblock %}

@@ -25,7 +25,8 @@
 
         <!-- Desktop nav -->
         <nav class="nav desktop-nav">
-            <a href="/" class="nav-item {% if request.path == '/' or  request.path.startswith('/portfolio') %}active{% endif %}">PORTFOLIO</a>
+            <a href="/" class="nav-item {% if request.path == '/' %}active{% endif %}">HOME</a>
+            <a href="/portfolio" class="nav-item {% if request.path.startswith('/portfolio') %}active{% endif %}">PORTFOLIO</a>
             <a href="/shop" class="nav-item {% if request.path.startswith('/shop') %}active{% endif %}">SHOP</a>
             <a href="/about" class="nav-item {% if request.path == '/about' %}active{% endif %}">ABOUT</a>
             <a href="/contact" class="nav-item {% if request.path == '/contact' %}active{% endif %}">CONTACT</a>

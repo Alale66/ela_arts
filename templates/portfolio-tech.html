@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Tech Portfolio – Ela Arts{% endblock %}
+
+{% block content %}
+
+<section class="tech-hero">
+    <div class="tech-hero-inner">
+        <div class="tech-photo">
+            <img src="/static/ela-portrait.jpg" alt="Elahe Sadeghi Portrait">
+        </div>
+
+        <div class="tech-hero-text">
+            <h1 class="tech-title">Tech Portfolio</h1>
+            <p class="tech-subtitle">
+                Software Developer with over a decade of experience in C#, SQL, Python, React, and full‑stack
+                development.
+            </p>
+        </div>
+    </div>
+</section>
+
+<hr class="tech-divider">
+
+<!-- SKILLS -->
+<section class="tech-section">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card"><strong>Languages:</strong> C#, SQL, JavaScript, Python</div>
+        <div class="skill-card"><strong>Frameworks:</strong> .NET, React, Flask, Spring Boot</div>
+        <div class="skill-card"><strong>Databases:</strong> SQL Server, MySQL, MongoDB</div>
+        <div class="skill-card"><strong>Tools:</strong> Git, DevExpress, Telerik, LLBLGen, NHibernate</div>
+        <div class="skill-card"><strong>Architectures:</strong> 3‑layer, REST APIs, backend services</div>
+        <div class="skill-card"><strong>Other:</strong> Encryption, mobile development, full‑stack development</div>
+    </div>
+</section>
+
+<hr class="tech-divider">
+
+<!-- PROJECTS -->
+<section class="tech-section">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <span>
+                Currently Working On
+            </span>
+            <h3 class="project-title">Ela Arts Website</h3>
+
+            <p class="project-text">
+                Designing and developing this portfolio website using Python, Flask, modular JavaScript,
+                and custom collage engines for dynamic image/video layouts. Focused on performance,
+                maintainability, and expressive visual storytelling.
+            </p>
+
+            <p>
+                <a class="link" href="https://github.com/Alale66/ela_arts" target="_blank">
+                    View Source Code
+                </a>
+            </p>
+        </div>
+
+
+        <div class="project-card">
+            <h3 class="project-title">Chia Project</h3>
+            <p class="project-text">
+                Developed business and service layers using Spring Framework and Spring Boot.
+                Built data access layer with JPA, Hibernate, MySQL, and MongoDB.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">EncBackup Mobile App</h3>
+            <p class="project-text">
+                Designed and implemented a mobile app for encrypting and storing photos, contacts, and personal data.
+                Built using React Native and AES encryption with secure backup to iCloud and Google Drive.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<hr class="tech-divider">
+
+<!-- EXPERIENCE -->
+<section class="tech-section">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>CETIYA — Software Developer</h3>
+            <span class="timeline-date">Dec 2011 – Jun 2013 · Iran</span>
+            <p>Win Applications using C#, SQL, LLBLGen, DevExpress, 3‑layer architecture.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>DBM Co. — Software Developer</h3>
+            <span class="timeline-date">Jul 2013 – Aug 2014 · Iran</span>
+            <p>Win Applications using C#, SQL, Entity Framework, Telerik, 3‑layer architecture.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Kyansoftco — Software Developer</h3>
+            <span class="timeline-date">Sep 2014 – Mar 2016 · Tehran</span>
+            <p>Win Applications using C#, SQL, NHibernate, Telerik, 3‑layer architecture.</p>
+        </div>
+
+    </div>
+</section>
+
+<hr class="tech-divider">
+
+<!-- LINKS -->
+<section class="tech-section">
+    <h2 class="section-title">Links</h2>
+
+    <p><strong>LinkedIn:</strong> <a class="link" href="https://www.linkedin.com/in/sadeghi-elahe" target="_blank">https://www.linkedin.com/in/sadeghi-elahe</a>
+    </p>
+    <p><strong>GitHub:</strong> <a class="link" href="https://github.com/Alale66" target="_blank">https://github.com/Alale66</a>
+    </p>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="/static/collage.js"></script>
+<script src="/static/collage-art.js"></script>
+
+{% endblock %}

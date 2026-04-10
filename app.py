@@ -23,7 +23,29 @@ with open("data/products.json", "r", encoding="utf-8") as f:
 
 @app.route("/")
 def home():
+    return render_template("home.html")
+
+
+@app.route("/portfolio")
+def portfolio():
     return render_template("profile.html")
+
+
+@app.route("/portfolio-tech")
+def portfolio_tech():
+    return render_template("portfolio-tech.html")
+
+
+@app.route("/portfolio-art")
+def portfolio_art():
+    return render_template("portfolio-art.html")
+
+
+@app.route("/portfolio-art/<slug>")
+def portfolio_art_items(slug):
+    if slug not in projects:
+        return render_template("coming-soon.html")
+    return render_template("portfolio-art.html")
 
 
 @app.route("/portfolio/<slug>")

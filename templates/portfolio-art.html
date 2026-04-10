@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Art Portfolio – Ela Arts{% endblock %}
+
+{% block content %}
+
+<section class="art-hero">
+    <h1 class="art-title">Art Portfolio</h1>
+    <p class="art-subtitle">
+        Stop‑motion animation, puppets, props, digital illustrations, and children’s books —
+        a world built by hand and imagination.
+    </p>
+    <hr class="art-line">
+</section>
+
+<!-- STOP-MOTION SECTION -->
+<section class="art-section">
+    <h2 class="section-title">Stop‑Motion & Puppetry</h2>
+    <p class="section-desc">
+        Handmade puppets, props, sets, and behind‑the‑scenes moments from my stop‑motion world.
+    </p>
+</section>
+
+<div id="stopmotion-collage" class="collage"></div>
+
+<hr class="art-divider">
+
+<!-- BOOKS SECTION -->
+<section class="art-section">
+    <h2 class="section-title">Children’s Books</h2>
+    <p class="section-desc">
+        Books written and illustrated with heart — blending imagination, color, and storytelling.
+    </p>
+</section>
+
+<div id="books-collage" class="collage"></div>
+
+<hr class="art-divider">
+
+<!-- DIGITAL ILLUSTRATION SECTION -->
+<section class="art-section">
+    <h2 class="section-title">Digital Illustration</h2>
+    <p class="section-desc">
+        Procreate illustrations, character designs, and visual storytelling pieces.
+    </p>
+</section>
+
+<div id="illustration-collage" class="collage"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/collage.js"></script>
+<script src="/static/stopmotion-collage.js"></script>
+<script src="/static/books-collage.js"></script>
+<script src="/static/illustration-collage.js"></script>
+{% endblock %}

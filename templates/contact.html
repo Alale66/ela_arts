@@ -1,13 +1,13 @@
 {% if success %}
-    <div class="contact-success">
-        Your message has been sent successfully!
-    </div>
+<div class="contact-success">
+    Your message has been sent successfully!
+</div>
 {% endif %}
 
 {% if error %}
-    <div class="contact-error">
-        Something went wrong. Please try again.
-    </div>
+<div class="contact-error">
+    Something went wrong. Please try again.
+</div>
 {% endif %}
 
 {% extends "base.html" %}
@@ -48,7 +48,9 @@
             </p>
 
             <p class="contact-line"><strong>Email:</strong> elahesadeghi.art@gmail.com</p>
-            <p class="contact-line"><strong>Instagram:</strong> the_ela_arts</p>
+            <p class="contact-line"><strong>Instagram:</strong> <a class="link" href="https://www.instagram.com/the_ela_arts"
+                                                                   target="_blank"
+                                                                   rel="noopener noreferrer">@the_ela_arts</a></p>
             <p class="contact-line contact-location"><strong>Location:</strong> Houston, TX</p>
 
             <form method="POST" action="/send-message" class="contact-form">
