@@ -24,17 +24,17 @@
 <script src="/static/stopmotion-collage.js"></script>
 
 <script>
-let cachedImages = [];
+    let cachedImages = [];
 
-loadAllMedia(stopmotionImages).then(images => {
-    cachedImages = images;
-    buildCollage(images, "stopmotion-collage");
-});
+    loadAllMedia(stopmotionImages).then(images => {
+        cachedImages = images;
+        buildCollage(images, "stopmotion-collage");
+    });
 
-window.addEventListener("resize", () => {
-    if (cachedImages.length > 0) {
-        buildCollage(cachedImages, "stopmotion-collage");
-    }
-});
+    window.addEventListener("resize", () => {
+        if (cachedImages.length > 0) {
+            buildCollage(cachedImages, "stopmotion-collage");
+        }
+    });
 </script>
 {% endblock %}

@@ -101,7 +101,7 @@ def project_page(group, slug):
     if parent_collection:
         slugs = parent_collection["items"]
     else:
-        slugs = list(group_projects.keys())
+        slugs = [slug]  # فقط خودش، یعنی هیچ prev/next
 
     idx = slugs.index(slug)
     prev_slug = slugs[idx - 1] if idx > 0 else None

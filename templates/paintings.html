@@ -5,6 +5,7 @@
 {% block content %}
 <section class="portfolio-section">
     <div class="portfolio-container">
+
         <section class="portfolio-hero">
             <h2 class="portfolio-title">{{ categories.paintings[0].title }}</h2>
             <p class="portfolio-subtitle">
@@ -22,17 +23,17 @@
 <script src="/static/painting-collage.js"></script>
 
 <script>
-let cachedImages = [];
+    let cachedImages = [];
 
-loadAllMedia(paintingImages).then(images => {
-    cachedImages = images;
-    buildCollage(images, "painting-collage");
-});
+    loadAllMedia(paintingImages).then(images => {
+        cachedImages = images;
+        buildCollage(images, "painting-collage");
+    });
 
-window.addEventListener("resize", () => {
-    if (cachedImages.length > 0) {
-        buildCollage(cachedImages, "painting-collage");
-    }
-});
+    window.addEventListener("resize", () => {
+        if (cachedImages.length > 0) {
+            buildCollage(cachedImages, "painting-collage");
+        }
+    });
 </script>
 {% endblock %}

@@ -28,7 +28,7 @@
   },
   "paintings": {
     "persia-collection": {
-      "title": "Persia Collection",
+      "title": "Persia",
       "subtitle": "Painting",
       "images": [
         "/static/painting/zarvan1.jpg",
@@ -38,7 +38,10 @@
       "text": [
         "The collection begins with Patra and Zarvan, inspired by the protective hybrid creatures that once stood at royal gates and sacred thresholds. Future works will explore other pillars of Persian heritage — from floral designs and decorative patterns to mythic forms and ceremonial emblems — creating a growing tapestry that celebrates the richness, beauty, and timeless spirit of Iran’s ancient past."
       ],
-      "items": [ "zarvan","patra"]
+      "items": [
+        "zarvan",
+        "patra"
+      ]
     },
     "patra": {
       "title": "Patra - The Guardian",
@@ -62,6 +65,19 @@
       ],
       "text": [
         "Inspired by the protective creatures of Achaemenid Persia, Zarvan reflects the strength of the winged bulls and hybrid guardians carved into Persepolis.\nIn ancient Iranian tradition, such beings stood at royal entrances and sacred spaces, symbolizing power, stability, and divine protection.\nZarvan carries that legacy forward — a steadfast guardian shaped by the enduring spirit of a civilization that believed every threshold needed a protector."
+      ]
+    },
+    "whispers-of-memory-collection": {
+      "title": "Whispers of Memory",
+      "subtitle": "Painting",
+      "images": [
+        "/static/painting/wom0.jpg",
+        "/static/painting/wom1.jpg",
+        "/static/painting/wom2.jpg",
+        "/static/painting/wom3.jpg"
+      ],
+      "text": [
+        "These two paintings were born from the emotions of the day I first met the love of my life.\nI tried to turn that moment—its anticipation, warmth, and quiet mystery—into art.\nHidden within the layers are fragments of text, traces of my thoughts from that day, transformed into abstract forms.\nThe colors and grids echo both the chaos and calm of memory—like a dream that feels sacred yet slightly haunting.\nIt’s a reflection of how love, memory, and imagination intertwine, whispering softly through time."
       ]
     }
   }
