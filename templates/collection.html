@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ collection.title }} – Ela Arts{% endblock %}
+
+{% block content %}
+<section class="portfolio-section">
+    <div class="portfolio-container">
+
+        <section class="portfolio-hero">
+            <h2 class="portfolio-title">{{ collection.title }}</h2>
+
+            {% if collection.text %}
+                {% for paragraph in collection.text %}
+                    <p class="portfolio-subtitle">{{ paragraph }}</p>
+                {% endfor %}
+            {% endif %}
+        </section>
+
+        <div id="collection-collage" class="collage"></div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/collage.js"></script>
+
+<script>
+const items = [
+    {% for child in children %}
+    {
+        src: "{{ child.images[0] }}",
+        title: "{{ child.title }}",
+        group: "{{ group }}",
+        slug: "{{ child.slug }}"
+    },
+    {% endfor %}
+];
+
+let cachedImages = [];
+
+loadAllMedia(items).then(images => {
+    cachedImages = images;
+    buildCollage(images, "collection-collage");
+});
+
+window.addEventListener("resize", () => {
+    if (cachedImages.length > 0) {
+        buildCollage(cachedImages, "collection-collage");
+    }
+});
+</script>
+{% endblock %}

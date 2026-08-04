@@ -89,7 +89,7 @@ function createRow(row, rowWidth, containerWidth, container) {
         // clickable
         div.style.cursor = "pointer";
         div.addEventListener("click", () => {
-            window.location.href = `/portfolio/${item.slug}`;
+            window.location.href = `/portfolio-art/${item.group}/${item.slug}`;
         });
 
         const img = document.createElement("img");

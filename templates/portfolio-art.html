@@ -4,55 +4,43 @@
 
 {% block content %}
 
-<section class="art-hero">
-    <h1 class="art-title">Art Portfolio</h1>
-    <p class="art-subtitle">
-        From stop‑motion puppets and tiny handmade props to digital paintings and children’s book illustrations, my work
-        blends tactile craft with digital tools like Procreate and Dragonframe — a world built by hand, heart, and
-        imagination.
-    </p>
-    <hr class="art-line">
+<section class="portfolio-section">
+    <div class="portfolio-container">
+        <section class="portfolio-hero">
+            <h1 class="art-title">Art</h1>
+            <p class="art-subtitle">
+                Explore my work across mixed media paintings, stop‑motion puppetry, children’s books, and digital
+                illustration.
+            </p>
+            <hr class="art-line">
+        </section>
+        <div class="art-list">
+            <!-- ⭐ Sections Card -->
+            {% for key, items in categories.items() %}
+            {% set card = items[0] %}
+
+            <a href="/portfolio-art/{{ card.slug }}" class="art-card">
+
+                <div class="art-card-image">
+                    {% if card.isVideo %}
+                    <video src="{{ card.src }}" autoplay muted loop></video>
+                    {% else %}
+                    <img src="{{ card.image }}" alt="{{ card.title }}">
+                    {% endif %}
+                </div>
+
+                <div class="art-card-content">
+                    <h2>{{ card.title }}</h2>
+                    <p class="art-desc">{{ card.description }}</p>
+
+                </div>
+
+            </a>
+            {% endfor %}
+
+        </div>
+
+    </div>
 </section>
 
-<!-- STOP-MOTION SECTION -->
-<section class="art-section">
-    <h2 class="section-title">Stop‑Motion & Puppetry</h2>
-    <p class="section-desc">
-        Handmade puppets, props, sets, and behind‑the‑scenes moments from my stop‑motion world.
-    </p>
-</section>
-
-<div id="stopmotion-collage" class="collage"></div>
-
-<hr class="art-divider">
-
-<!-- BOOKS SECTION -->
-<section class="art-section">
-    <h2 class="section-title">Children’s Books</h2>
-    <p class="section-desc">
-        Books written and illustrated with heart — blending imagination, color, and storytelling.
-    </p>
-</section>
-
-<div id="books-collage" class="collage"></div>
-
-<hr class="art-divider">
-
-<!-- DIGITAL ILLUSTRATION SECTION -->
-<section class="art-section">
-    <h2 class="section-title">Digital Illustration</h2>
-    <p class="section-desc">
-        Procreate illustrations, character designs, and visual storytelling pieces.
-    </p>
-</section>
-
-<div id="illustration-collage" class="collage"></div>
-
-{% endblock %}
-
-{% block scripts %}
-<script src="/static/collage.js"></script>
-<script src="/static/stopmotion-collage.js"></script>
-<script src="/static/books-collage.js"></script>
-<script src="/static/illustration-collage.js"></script>
 {% endblock %}

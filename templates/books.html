@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Books – Ela Arts{% endblock %}
+
+{% block content %}
+
+<!-- BOOKS SECTION -->
+<section class="portfolio-section">
+    <div class="portfolio-container">
+        <section class="portfolio-hero">
+            <h2 class="portfolio-title">{{ categories.books[0].title }}</h2>
+            <p class="portfolio-subtitle">
+                {{ categories.books[0].description }}
+            </p>
+        </section>
+
+        <div id="books-collage" class="collage"></div>
+
+        {% endblock %}
+
+        {% block scripts %}
+        <script src="/static/collage.js"></script>
+        <script src="/static/books-collage.js"></script>
+
+        {% endblock %}
+    </div>
+</section>

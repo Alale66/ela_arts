@@ -8,17 +8,20 @@ import json
 
 app = Flask(__name__)
 load_dotenv()
-with open("./data/projects.json", "r", encoding="utf-8") as f:
+with open("static/data/projects.json", "r", encoding="utf-8") as f:
     projects = json.load(f)
 
-with open("./data/blogs.json", "r", encoding="utf-8") as f:
+with open("static/data/blogs.json", "r", encoding="utf-8") as f:
     blogs = json.load(f)
 
-with open("./data/shop-categories.json", "r", encoding="utf-8") as f:
+with open("static/data/shop-categories.json", "r", encoding="utf-8") as f:
     shop_categories = json.load(f)
 
-with open("data/products.json", "r", encoding="utf-8") as f:
+with open("static/data/products.json", "r", encoding="utf-8") as f:
     products = json.load(f)
+
+with open("static/data/art_sections.json", "r", encoding="utf-8") as f:
+    art_sections = json.load(f)
 
 
 @app.route("/")
@@ -38,41 +41,78 @@ def portfolio_tech():
 
 @app.route("/portfolio-art")
 def portfolio_art():
-    return render_template("portfolio-art.html")
+    return render_template("portfolio-art.html", categories=art_sections)
 
 
 @app.route("/portfolio-art/<slug>")
-def portfolio_art_items(slug):
-    if slug not in projects:
+def portfolio_art_sections(slug):
+    # Find the matching item inside art_sections
+    item = None
+    for section in art_sections.values():
+        for entry in section:
+            if entry.get("slug") == slug:
+                item = entry
+                break
+
+    # If not found → show coming soon
+    if not item:
         return render_template("coming-soon.html")
-    return render_template("portfolio-art.html")
+
+    # Render a template based on slug
+    template_name = f"{slug}.html"
+
+    return render_template(template_name, item=item, categories=art_sections)
 
 
-@app.route("/portfolio/<slug>")
-def project_page(slug):
-    # ❗ Check if slug exists
-    if slug not in projects:
+@app.route("/portfolio-art/<group>/<slug>")
+def project_page(group, slug):
+    if group not in projects:
         return render_template("coming-soon.html")
 
-    # ⭐ Create an ordered list of slugs
-    project_slugs = list(projects.keys())
+    group_projects = projects[group]
 
-    # ⭐ Find current index
-    current_index = project_slugs.index(slug)
+    if slug not in group_projects:
+        return render_template("coming-soon.html")
 
-    # ⭐ Calculate previous and next
-    prev_slug = project_slugs[current_index - 1] if current_index > 0 else None
-    next_slug = project_slugs[current_index + 1] if current_index < len(project_slugs) - 1 else None
+    item = group_projects[slug]
 
-    # ⭐ Get the project data
-    project = projects[slug]
+    # 🔹 اگر کلکسیون است → صفحه‌ی collection.html
+    if "items" in item:
+        children = [
+            {**group_projects[child], "slug": child, "group": group}
+            for child in item["items"]
+        ]
 
-    # ⭐ Send everything to template
+        return render_template(
+            "collection.html",
+            collection=item,
+            children=children,
+            group=group
+        )
+
+    # 🔹 اگر پروژه تکی است → باید ببینیم عضو کدام کلکسیون است
+    parent_collection = None
+    for key, value in group_projects.items():
+        if "items" in value and slug in value["items"]:
+            parent_collection = value
+            break
+
+    # 🔹 اگر عضو کلکسیون است → prev/next فقط از همان کلکسیون
+    if parent_collection:
+        slugs = parent_collection["items"]
+    else:
+        slugs = list(group_projects.keys())
+
+    idx = slugs.index(slug)
+    prev_slug = slugs[idx - 1] if idx > 0 else None
+    next_slug = slugs[idx + 1] if idx < len(slugs) - 1 else None
+
     return render_template(
         "project.html",
-        project=project,
+        project=item,
         prev_slug=prev_slug,
-        next_slug=next_slug
+        next_slug=next_slug,
+        group=group
     )
 
 
@@ -158,11 +198,6 @@ def blog(slug):
         return "Blog post not found", 404
 
     return render_template("blog.html", post=post)
-
-
-@app.route("/blog")
-def blog_redirect():
-    return render_template("blog-list.html", posts=blogs)
 
 
 @app.route("/log-in")

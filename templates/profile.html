@@ -3,35 +3,39 @@
 {% block title %}Portfolio – Ela Arts{% endblock %}
 
 {% block content %}
+<section class="portfolio-section">
+    <div class="portfolio-container">
+        <section class="portfolio-hero">
+            <h1 class="portfolio-title">My Work</h1>
+            <p class="portfolio-subtitle">
+                A collection of my technical projects and artistic creations — two worlds that shape who I am.
+            </p>
+            <hr class="portfolio-line">
+        </section>
 
-<section class="portfolio-hero">
-    <h1 class="portfolio-title">My Work</h1>
-    <p class="portfolio-subtitle">
-        A collection of my technical projects and artistic creations — two worlds that shape who I am.
-    </p>
-    <hr class="portfolio-line">
-</section>
 
-<section class="portfolio-grid">
+        <section class="portfolio-grid">
 
-    <!-- TECH CARD -->
-    <a href="/portfolio-tech" class="portfolio-card">
-        <div class="card-icon">💻</div>
-        <h2 class="card-title">Tech Portfolio</h2>
-        <p class="card-text">
-            Software development, Python, Flask, C#, SQL, React, and full‑stack projects.
-        </p>
-    </a>
+            <!-- TECH CARD -->
+            <a href="/portfolio-tech" class="portfolio-card">
+                <div class="card-icon">💻</div>
+                <h2 class="card-title">Tech</h2>
+                <p class="card-text">
+                    Software development, Python, Flask, C#, SQL, React, and full‑stack projects.
+                </p>
+            </a>
 
-    <!-- ART CARD -->
-    <a href="/portfolio-art" class="portfolio-card">
-        <div class="card-icon">🎨</div>
-        <h2 class="card-title">Art Portfolio</h2>
-        <p class="card-text">
-            Stop‑motion animation, puppets, props, digital illustrations, and children’s books.
-        </p>
-    </a>
+            <!-- ART CARD -->
+            <a href="/portfolio-art" class="portfolio-card">
+                <div class="card-icon">🎨</div>
+                <h2 class="card-title">Art</h2>
+                <p class="card-text">
+                    Stop‑motion animation, puppets, props, digital illustrations, and children’s books.
+                </p>
+            </a>
 
+        </section>
+    </div>
 </section>
 
 {% endblock %}

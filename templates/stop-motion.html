@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Stop-motion – Ela Arts{% endblock %}
+
+{% block content %}
+<section class="portfolio-section">
+    <div class="portfolio-container">
+
+        <section class="portfolio-hero">
+            <h2 class="portfolio-title">{{ categories.stop_motion[0].title }}</h2>
+            <p class="portfolio-subtitle">
+                {{ categories.stop_motion[0].description }}
+            </p>
+        </section>
+
+        <div id="stopmotion-collage" class="collage"></div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/collage.js"></script>
+<script src="/static/stopmotion-collage.js"></script>
+
+<script>
+let cachedImages = [];
+
+loadAllMedia(stopmotionImages).then(images => {
+    cachedImages = images;
+    buildCollage(images, "stopmotion-collage");
+});
+
+window.addEventListener("resize", () => {
+    if (cachedImages.length > 0) {
+        buildCollage(cachedImages, "stopmotion-collage");
+    }
+});
+</script>
+{% endblock %}

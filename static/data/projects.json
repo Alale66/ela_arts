@@ -1,0 +1,69 @@
+{
+  "stop-motion": {
+    "ela-the-puppet": {
+      "title": "Ela the Puppet",
+      "subtitle": "Stop-Motion",
+      "images": [
+        "/static/img1.jpg",
+        "/static/img1b.jpg",
+        "/static/img1c.jpg"
+      ],
+      "text": [
+        "Let me introduce you to Little Ela, my very first puppet, inspired by me. Everything began with this puppet, and my love for stop motion continues to grow every day. I'm excited to share this journey with you as I explore creativity and bring stories to life, one frame at time!"
+      ]
+    },
+    "mini-vahid": {
+      "title": "Mini Vahid",
+      "subtitle": "Stop-Motion",
+      "images": [
+        "/static/img2.jpg",
+        "/static/img2b.jpg",
+        "/static/img2c.jpg",
+        "/static/img2d.jpg"
+      ],
+      "text": [
+        "This little guy was inspired by my love of my life and was a special birthday gift for him. He has always been a huge fan of my work, encouraging me to follow my dreams. I'm thrilled to share that he was over the moon to receive such a gift! If you’re interested, don’t hesitate to order yours—I’m open for commissions!"
+      ]
+    }
+  },
+  "paintings": {
+    "persia-collection": {
+      "title": "Persia Collection",
+      "subtitle": "Painting",
+      "images": [
+        "/static/painting/zarvan1.jpg",
+        "/static/painting/patra0.jpg",
+        "/static/painting/zarvan2.jpg"
+      ],
+      "text": [
+        "The collection begins with Patra and Zarvan, inspired by the protective hybrid creatures that once stood at royal gates and sacred thresholds. Future works will explore other pillars of Persian heritage — from floral designs and decorative patterns to mythic forms and ceremonial emblems — creating a growing tapestry that celebrates the richness, beauty, and timeless spirit of Iran’s ancient past."
+      ],
+      "items": [ "zarvan","patra"]
+    },
+    "patra": {
+      "title": "Patra - The Guardian",
+      "subtitle": "Painting",
+      "images": [
+        "/static/painting/patra0.jpg",
+        "/static/painting/patra1.jpg",
+        "/static/painting/patra2.jpg"
+      ],
+      "text": [
+        "Inspired by the guardian creatures of Achaemenid Persia, Patra carries the spirit of the winged lions and griffins carved into the stones of Persepolis.\nIn ancient Iranian tradition, such beings protected royal gates, sacred halls, and the treasures of kings.\nPatra continues that legacy — a calm, watchful sentinel shaped by the heritage of a civilization that believed every sacred place deserved a guardian."
+      ]
+    },
+    "zarvan": {
+      "title": "Zarvan - The Guardian",
+      "subtitle": "Painting",
+      "images": [
+        "/static/painting/zarvan0.jpg",
+        "/static/painting/zarvan1.jpg",
+        "/static/painting/zarvan2.jpg"
+      ],
+      "text": [
+        "Inspired by the protective creatures of Achaemenid Persia, Zarvan reflects the strength of the winged bulls and hybrid guardians carved into Persepolis.\nIn ancient Iranian tradition, such beings stood at royal entrances and sacred spaces, symbolizing power, stability, and divine protection.\nZarvan carries that legacy forward — a steadfast guardian shaped by the enduring spirit of a civilization that believed every threshold needed a protector."
+      ]
+    }
+  }
+}
+
