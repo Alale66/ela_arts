@@ -1,25 +1,25 @@
 const illustrationImages = [
+    {
+        src: "/static/illustration/aram.mp4",
+        title: "Digital Portrait Process",
+        slug: "digital-portrait",
+        isVideo: true
+    },
     {src: "/static/illustration/dyk-book-ils.jpg", title: "Did You Know?", slug: "did-you-know-book"},
     {
         src: "/static/illustration/father-card.mp4",
-        title: "Illustration Process",
+        title: "Father's Day Card Process",
         slug: "happy-father's-day-card",
         isVideo: true
     },
     {src: "/static/illustration/nowruz2-book-ils.jpg", title: "Nowruz", slug: "nowruz-book"},
-    {
-        src: "/static/illustration/aram.mp4",
-        title: "Illustration Process",
-        slug: "digital-portrait",
-        isVideo: true
-    },
     {src: "/static/illustration/nowruz-card-ils.jpg", title: "Amoo Nowruz", slug: "amoo-nowruz-card"},
     {src: "/static/illustration/valentine-card-ils.jpg", title: "Happy Valentine's Day", slug: "happy-valentine's-day"},
     {src: "/static/illustration/nowruz-book-ils.jpg", title: "Nowruz", slug: "nowruz-book"},
 
     {
         src: "/static/illustration/daddy-bear.mp4",
-        title: "Illustration Process",
+        title: "Daddy Bear Illustration",
         slug: "daddy-bear-card",
         isVideo: true
     }
