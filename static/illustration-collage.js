@@ -1,4 +1,10 @@
 const illustrationImages = [
+    {
+        src: "/static/illustration/aram.mp4",
+        title: "Illustration Process",
+        slug: "digital-portrait",
+        isVideo: true
+    },
     {src: "/static/illustration/dyk-book-ils.jpg", title: "Did You Know?", slug: "did-you-know-book"},
     {
         src: "/static/illustration/father-card.mp4",

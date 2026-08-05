@@ -7,6 +7,7 @@
 <!-- DIGITAL ILLUSTRATION SECTION -->
 <section class="portfolio-section">
     <div class="portfolio-container">
+
         <section class="portfolio-hero">
             <h2 class="portfolio-title">{{ categories.digital[0].title }}</h2>
             <p class="portfolio-subtitle">
@@ -14,14 +15,22 @@
             </p>
         </section>
 
+        <!-- ⭐ COMMISSION MESSAGE -->
+        <p class="portfolio-subtitle">
+            Commissions are available for digital portraits and custom illustrations.
+            Please <a href="/contact" class="link">contact the artist</a>
+            for inquiries, pricing, and availability.
+        </p>
+
         <div id="illustration-collage" class="collage"></div>
 
-        {% endblock %}
 
-        {% block scripts %}
-        <script src="/static/collage.js"></script>
-        <script src="/static/illustration-collage.js"></script>
-
-        {% endblock %}
     </div>
 </section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/collage.js"></script>
+<script src="/static/illustration-collage.js"></script>
+{% endblock %}
