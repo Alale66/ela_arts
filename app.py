@@ -20,7 +20,7 @@ with open("static/data/shop-categories.json", "r", encoding="utf-8") as f:
 with open("static/data/products.json", "r", encoding="utf-8") as f:
     products = json.load(f)
 
-with open("static/data/art_sections.json", "r", encoding="utf-8") as f:
+with open("static/data/art-sections.json", "r", encoding="utf-8") as f:
     art_sections = json.load(f)
 
 
