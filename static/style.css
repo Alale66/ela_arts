@@ -70,6 +70,12 @@ a, button {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+.home-image img:hover {
+    filter: brightness(85%);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
 .home-title {
     font-size: 2.4rem;
     line-height: 1.2;
