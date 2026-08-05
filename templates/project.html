@@ -60,6 +60,25 @@
         {% for paragraph in project.text %}
         <p class="project-text">{{ paragraph }}</p>
         {% endfor %}
+        {% if project.details %}
+<div class="project-details">
+    <h3 class="details-title">Artwork Details</h3>
+    <ul class="details-list">
+        {% for key, value in project.details.items() %}
+            {% if key == "Availability" %}
+                <li>
+                    <strong>{{ key }}:</strong>
+                    <a href="/contact" class="link">{{ value }}</a>
+                </li>
+            {% else %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+
 
     </div>
 </section>
