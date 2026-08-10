@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Shop', url: '/shop', keywords: ['shop', 'store', 'buy', 'purchase', 'products'] },
             { name: 'About', url: '/about', keywords: ['about', 'artist', 'ela', 'bio', 'biography'] },
             { name: 'Contact', url: '/contact', keywords: ['contact', 'email', 'message', 'reach'] },
-            { name: 'Blog', url: '/blog', keywords: ['blog', 'posts', 'news', 'articles'] },
+            { name: 'Blog', url: '/blog-list', keywords: ['blog', 'posts', 'news', 'articles'] },
             { name: 'Log In', url: '/log-in', keywords: ['log', 'login', 'sign', 'account', 'user'] },
             { name: 'Cart', url: '/cart', keywords: ['cart', 'basket', 'shopping', 'checkout'] }
         ];
