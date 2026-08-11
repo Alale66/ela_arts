@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 import smtplib
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
@@ -123,6 +123,13 @@ def shop():
 
 @app.route("/shop/<slug>")
 def shop_category(slug):
+    # Redirect paintings category to portfolio page
+    if slug == "paintings":
+        return redirect("/portfolio-art/paintings")
+
+    if slug == "puppets":
+        return redirect("/portfolio-art/stop-motion")
+
     category = next((c for c in shop_categories if c["slug"] == slug), None)
     if not category:
         return "Category not found", 404
